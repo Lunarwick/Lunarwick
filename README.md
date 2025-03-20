@@ -5,6 +5,4 @@ I believe in the power of collaboration and am eager to connect with other passi
 - ⚡ Currently exploring the impact of minimalist design on user engagement.
 
 <!---
-Lunarwick/Lunarwick is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Lunarwick/Lunarwick is a ✨ special ✨ 
