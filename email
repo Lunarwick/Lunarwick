@@ -1,0 +1,80 @@
+import tkinter as tk
+from tkinter import messagebox
+import random
+
+def generate_etransfer_email(sender_email, sender_name, recipient_email, amount="$80.00"):
+    """Generates a simulated e-transfer email and prepares it for copying."""
+
+    subject = "You've Received an Interac e-Transfer"
+
+    body = f"""
+    From: {sender_name} <{sender_email}>
+    To: {recipient_email}
+    Subject: {subject}
+
+    You've received an Interac e-Transfer from {sender_name} ({sender_email}) for {amount}.
+
+    To deposit your money, please click the following link:
+
+    <a href="http://your-safe-tracking-server.com/deposit?id={random.randint(1000, 9999)}">Deposit Your Money</a>
+
+    Or copy and paste this link into your browser: http://your-safe-tracking-server.com/deposit?id={random.randint(1000, 9999)}
+
+    If you have any questions, please contact your financial institution.
+
+    ---
+
+    PAYLOAD SECTION:
+
+    [INSERT YOUR PAYLOAD HERE - Additional Instructions, Messages, etc.]
+
+    ---
+
+    Security Note:
+    Be cautious of unsolicited e-Transfers. Always verify the sender and amount before depositing.
+    """
+
+    email_content = body  # Store the email content
+
+    return email_content
+
+def copy_email_to_clipboard(email_content):
+    """Copies the generated email content to the clipboard."""
+    root.clipboard_clear()
+    root.clipboard_append(email_content)
+    root.update()
+    messagebox.showinfo("Copied!", "Email content copied to clipboard!")
+
+# GUI setup
+root = tk.Tk()
+root.title("Interac e-Transfer Email Generator (Copy)")
+
+recipient_label = tk.Label(root, text="Recipient Email:")
+recipient_label.pack()
+
+recipient_entry = tk.Entry(root)
+recipient_entry.pack()
+
+sender_email_label = tk.Label(root, text="Sender Email:")
+sender_email_label.pack()
+
+sender_email_entry = tk.Entry(root)
+sender_email_entry.pack()
+
+sender_name_label = tk.Label(root, text="Sender Name:")
+sender_name_label.pack()
+
+sender_name_entry = tk.Entry(root)
+sender_name_entry.pack()
+
+amount_label = tk.Label(root, text="Amount:")
+amount_label.pack()
+
+amount_entry = tk.Entry(root)
+amount_entry.pack()
+
+generate_button = tk.Button(root, text="Generate e-Transfer Email", command=lambda: copy_email_to_clipboard(
+    generate_etransfer_email(sender_email_entry.get(), sender_name_entry.get(), recipient_entry.get(), amount_entry.get())))
+generate_button.pack()
+
+root.mainloop()
