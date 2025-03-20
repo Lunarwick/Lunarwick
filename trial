@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interac e-Transfer - Gmail Mockup</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .gmail-container {
+            width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .gmail-header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gmail-header img {
+            height: 24px;
+        }
+
+        .gmail-sender {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .gmail-sender .sender-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .gmail-sender .sender-details {
+            flex-grow: 1;
+        }
+
+        .gmail-sender .sender-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .gmail-email-content {
+            padding: 20px;
+        }
+
+        .gmail-email-content .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .gmail-email-content .header img {
+            height: 24px;
+        }
+
+        .gmail-email-content .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .gmail-email-content .message {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .gmail-email-content .transfer-details {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .gmail-email-content .transfer-details p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+
+        .gmail-footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .gmail-footer button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gmail-container">
+        <div class="gmail-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail Logo">
+            <span>14%</span>
+        </div>
+        <div class="gmail-sender">
+            <div class="sender-icon">R</div>
+            <div class="sender-details">
+                <p>RBC Royal... 5:29 p.m.</p>
+                <p>to me <span style="font-size: 12px;">v</span></p>
+            </div>
+        </div>
+        <div class="gmail-email-content">
+            <div class="header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/InteracLogo.svg" alt="Interac Logo">
+                <a href="#">View in browser | FR</a>
+            </div>
+            <div class="title">Interac e-Transfer: Your $80.00 transfer to CAROL LYNN MARIETTA has been successfully deposited. Inbox</div>
+            <div class="message">Hi MATTHEW DANIELSON, <br> Your transfer to CAROL LYNN MARIETTA was successfully deposited. <br><br> The $80.00 (CAD) you sent to CAROL LYNN MARIETTA has been successfully deposited.</div>
+            <div class="transfer-details">
+                <p>Date: March 19, 2025</p>
+                <p>Reference Number: C1AQnQackNuS</p>
+            </div>
+        </div>
+        <div class="gmail-footer">
+            <button><u>U</u></button>
+            <button>← Reply</button>
+            <button>→</button>
+            <button>☺</button>
+        </div>
+    </div>
+</body>
+</html>
